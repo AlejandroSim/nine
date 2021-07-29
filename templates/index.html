@@ -6,10 +6,15 @@
       <h1>Community Events Board</h1>
       <div class="event-list">
         <ul>
-          {% for event in events %}
-            <li>{{ event.event }} - {{ event.date }}</li>
+          {% for u in users %}
+            <li>{{ users.name }} - {{ users.random }}</li>
           {% endfor %}
         </ul>
       </div>
+    <form method = "post" action = "/event">
+        <input type = "text" name = first_name placeholder ="What is your first name?">
+        <input type = "date" name = date placeholder = "What is the date?">
+        <input type ="submit" value =submit>
+    </form>
     </body>
 </html>
