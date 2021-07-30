@@ -55,8 +55,10 @@ def event():
         user_name = request.form['first_name']
         user_date = request.form['date']
         event = mongo.db.events
+        user = mongo.db.users
         event.insert({'first_name': user_name, 'date': user_date})
+        return render_template('event.html', user=user)
 # joy = mongo.db.user
 # users = joy.find({'name' : 'Alejandro'})
 
-# return render_template('event.html', users=users)
+#  return render_template('event.html', users=users)
